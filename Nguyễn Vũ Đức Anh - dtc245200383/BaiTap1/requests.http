@@ -1,0 +1,34 @@
+﻿@api = http://localhost:5000
+
+### Health check - expected 200
+GET {{api}}/
+
+### List assignments - expected 200
+GET {{api}}/api/assignments
+
+### Create a valid submission - expected 201 Created
+# @name submit
+POST {{api}}/api/submissions
+Content-Type: application/json
+
+{
+  "assignmentId": 1,
+  "studentCode": "dtc245200383",
+  "repositoryUrl": "https://github.com/USERNAME/EduSubmit-dtc245200383"
+}
+
+### Missing student code - expected 400 Bad Request
+POST {{api}}/api/submissions
+Content-Type: application/json
+
+{
+  "assignmentId": 1,
+  "studentCode": "",
+  "repositoryUrl": "https://example.com/student/repo"
+}
+
+### Read the submission created above - expected 200
+GET {{api}}/api/submissions/{{submit.response.body.$.id}}
+
+### Read a non-existent submission - expected 404
+GET {{api}}/api/submissions/00000000-0000-0000-0000-000000000000
