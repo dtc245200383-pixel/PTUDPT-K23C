@@ -1,6 +1,6 @@
 ﻿# Bài 1 – Tổng quan hệ thống và MEP
 
-Họ tên: [BỔ SUNG] MSSV: dtc245200383 Lớp: [BỔ SUNG]
+Họ tên: Nguyễn Vũ Đức Anh MSSV: dtc245200383 Lớp: K23C
 
 > Nhật ký này ghi kết quả đã quan sát được trong buổi thực hành và các bước đã chạy trong project EduSubmit. Trước khi nộp, bổ sung ảnh chụp màn hình tại các vị trí đánh dấu và điền thông tin cá nhân còn thiếu.
 
@@ -83,3 +83,4 @@ Họ tên: [BỔ SUNG] MSSV: dtc245200383 Lớp: [BỔ SUNG]
 - 400 Bad Request: dữ liệu yêu cầu không hợp lệ.
 - 404 Not Found: không tìm thấy tài nguyên theo ID.
 - Client kiểm tra status trước khi xử lý body để không coi phản hồi lỗi là dữ liệu thành công.
+
